@@ -1,6 +1,6 @@
 [build]
   base = "docs3"
-  publish = "build"
+  publish = "docs3/build"
   command = "npm install && npm run build"
 
 [build.environment]
