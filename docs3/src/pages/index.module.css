@@ -1,1 +1,31 @@
-.heroBanner {\n  padding: 4rem 0;\n  text-align: center;\n  position: relative;\n  overflow: hidden;\n}\n\n.buttons {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-top: 2rem;\n}\n\n.features {\n  display: flex;\n  align-items: center;\n  padding: 2rem 0;\n  width: 100%;\n}\n\n.features h3 {\n  font-size: 1.5rem;\n  margin-bottom: 1rem;\n}\n\n@media screen and (max-width: 996px) {\n  .heroBanner {\n    padding: 2rem;\n  }\n}\n
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.features h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}

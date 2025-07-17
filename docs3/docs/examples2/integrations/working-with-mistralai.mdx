@@ -1,0 +1,47 @@
+
+
+
+<tr style={{'text-align: right;'}}>
+<th data-quarto-table-cell-role="th">input</th>
+<th data-quarto-table-cell-role="th">response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What three species of fish have the highest mercury content?</td>
+<td>The three species of fish that typically have the highest mercury content are: 1. King Mackerel 2. Shark 3. Swordfish These fish are often at the top of the food chain and consume other fish that have accumulated mercury in their bodies. As a result, they tend to have higher mercury levels. It's recommended to limit consumption of these fish, especially for pregnant women, nursing mothers, young children, and people who eat fish frequently.</td>
+</tr>
+</tbody>
+</table>
+`];
+
+[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://github.com/pixeltable/pixeltable/blob/release/docs/notebooks/integrations/working-with-mistralai.ipynb)  
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pixeltable/pixeltable/blob/release/docs/notebooks/integrations/working-with-mistralai.ipynb)  
+<a href="https://raw.githubusercontent.com/pixeltable/pixeltable/release/docs/notebooks/integrations/working-with-mistralai.ipynb" download><img src="https://img.shields.io/badge/%E2%AC%87-Download%20Notebook-blue" alt="Download Notebook" / /></a>
+
+# Working with Mistral AI in Pixeltable
+
+Pixeltable’s Mistral AI integration enables you to access Mistral’s LLM
+and other models via the Mistral AI API.
+
+### Prerequisites
+
+-   A Mistral AI account with an API key
+    (https://console.mistral.ai/api-keys/)
+
+### Important Notes
+
+-   Mistral AI usage may incur costs based on your Mistral AI plan.
+-   Be mindful of sensitive data and consider security measures when
+    integrating with external services.
+
+First you’ll need to install required libraries and enter a Mistral AI
+API key.
+
+
+```python
+%pip install -qU pixeltable mistralai
+```
+
+
+```python

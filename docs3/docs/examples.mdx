@@ -1,0 +1,53 @@
+---
+title: "Pixeltable Examples"
+description: "Interactive Jupyter examples for Pixeltable"
+---
+
+# Pixeltable Examples
+
+Coming soon: Live, interactive examples you can run right in the browser!
+
+## Basic Pixeltable Operations
+
+Here's what we'll include:
+
+### 1. Getting Started
+- Install and import Pixeltable
+- Create your first table
+- Add data and query it
+
+### 2. AI Integrations
+- Connect to OpenAI, Anthropic, etc.
+- Run AI models on your data
+- Build RAG applications
+
+### 3. Computer Vision
+- Work with images and videos
+- Object detection and analysis
+- Multimodal workflows
+
+## Manual Examples (For Now)
+
+While we set up the interactive environment, here are some key Pixeltable examples:
+
+```python
+# Install Pixeltable
+pip install pixeltable
+
+# Import and create a table
+import pixeltable as pxt
+
+t = pxt.create_table('demo_table', {'name': str, 'age': int})
+
+# Add data
+t.insert([
+    {'name': 'Alice', 'age': 25},
+    {'name': 'Bob', 'age': 30}
+])
+
+# Query data
+result = t.select(t.name, t.age).collect()
+print(result)
+```
+
+**Interactive cells coming soon!**

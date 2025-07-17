@@ -1,0 +1,47 @@
+
+
+
+<tr style={{'text-align: right;'}}>
+<th data-quarto-table-cell-role="th">input</th>
+<th data-quarto-table-cell-role="th">response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What was the outcome of the 1904 US Presidential election?</td>
+<td>The **1904 U.S. Presidential election** resulted in a decisive victory for the incumbent **Republican** President **Theodore Roosevelt**, who had assumed office in 1901 after the assassination of William McKinley. ### **Key Results:** - **Theodore Roosevelt (Republican)** won **56.4%** of the popular vote and **336 electoral votes** (70.6% of the total). - **Alton B. Parker (Democrat)** received **37.6%** of the popular vote and **140 electoral votes**. - **Eugene V. Debs (Socialist)** and **Silas C. Swallow (Prohibition)** also ran but received minimal support. ### **Significance:** - Roosevelt's landslide victory solidified his leadership and progressive policies, including trust-busting and conservation efforts. - This was the first election in which a sitting president who had inherited the office (rather than being elected to it) won a full term in his own right. Roosevelt carried **32 of the 45 states**, demonstrating broad national support.</td>
+</tr>
+</tbody>
+</table>
+`];
+
+[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://github.com/pixeltable/pixeltable/blob/release/docs/notebooks/integrations/working-with-deepseek.ipynb)  
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pixeltable/pixeltable/blob/release/docs/notebooks/integrations/working-with-deepseek.ipynb)  
+<a href="https://raw.githubusercontent.com/pixeltable/pixeltable/release/docs/notebooks/integrations/working-with-deepseek.ipynb" download><img src="https://img.shields.io/badge/%E2%AC%87-Download%20Notebook-blue" alt="Download Notebook" / /></a>
+
+# Working with Deepseek in Pixeltable
+
+Pixeltable’s Deepseek integration enables you to access Deepseek’s LLM
+via the Deepseek API.
+
+### Prerequisites
+
+-   A Deepseek account with an API key (https://api-docs.deepseek.com/)
+
+### Important Notes
+
+-   Deepseek usage may incur costs based on your Deepseek plan.
+-   Be mindful of sensitive data and consider security measures when
+    integrating with external services.
+
+First you’ll need to install the required libraries and enter a Deepseek
+API key. Deepseek uses the OpenAI SDK as its Python API, so we need to
+install it in addition to Pixeltable.
+
+
+```python
+%pip install -qU pixeltable openai
+```
+
+
+```python

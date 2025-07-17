@@ -41,6 +41,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          routeBasePath: 'docs', // Serve docs at /docs instead of root
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -73,9 +74,10 @@ const config = {
             label: 'Docs',
           },
           {
-            href: 'https://pixeltable.github.io/pixeltable/',
-            label: 'API Reference',
+            type: 'docSidebar',
+            sidebarId: 'sdkSidebar',
             position: 'left',
+            label: 'SDK',
           },
           {
             href: 'https://discord.com/invite/QPyqFYx2UN',
@@ -100,8 +102,12 @@ const config = {
                 to: '/docs/get-started/overview',
               },
               {
-                label: 'API Reference',
-                href: 'https://pixeltable.github.io/pixeltable/',
+                label: 'Examples',
+                to: '/docs/examples',
+              },
+              {
+                label: 'SDK Reference',
+                to: '/docs/sdk',
               },
             ],
           },

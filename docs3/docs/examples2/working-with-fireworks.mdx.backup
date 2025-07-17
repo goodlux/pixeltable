@@ -1,0 +1,103 @@
+---
+title: "working with fireworks"
+description: "Jupyter notebook example for Pixeltable"
+---
+
+[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://github.com/pixeltable/pixeltable/blob/release/docs/notebooks/integrations/working-with-fireworks.ipynb)  
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pixeltable/pixeltable/blob/release/docs/notebooks/integrations/working-with-fireworks.ipynb)  
+`<a href="https://raw.githubusercontent.com/pixeltable/pixeltable/release/docs/notebooks/integrations/working-with-fireworks.ipynb" download>`{=html}`<img src="https://img.shields.io/badge/%E2%AC%87-Download%20Notebook-blue" alt="Download Notebook">`{=html}`</a>`{=html}
+
+# Working with Fireworks AI in Pixeltable
+
+Pixeltable's Fireworks integration enables you to access LLMs hosted on
+the Fireworks platform.
+
+### Prerequisites
+
+-   A Fireworks account with an API key (https://fireworks.ai/api-keys)
+
+### Important Notes
+
+-   Fireworks usage may incur costs based on your Fireworks plan.
+-   Be mindful of sensitive data and consider security measures when
+    integrating with external services.
+
+First you'll need to install required libraries and enter a Fireworks
+API key.
+
+Now let's create a Pixeltable directory to hold the tables for our demo.
+
+    Connected to Pixeltable database at: postgresql+psycopg://postgres:@/pixeltable?host=/Users/asiegel/.pixeltable/pgdata
+    Created directory 'fireworks_demo'.
+
+
+
+
+
+    <pixeltable.catalog.dir.Dir at 0x301799de0>
+
+## Completions
+
+Create a Table: In Pixeltable, create a table with columns to represent
+your input data and the columns where you want to store the results from
+Fireworks.
+
+    Created table `chat`.
+    Added 0 column values with 0 errors.
+
+
+
+
+
+    UpdateStatus(num_rows=0, num_computed_values=0, num_excs=0, updated_cols=[], cols_with_excs=[])
+
+
+
+    Added 0 column values with 0 errors.
+
+
+
+
+
+    UpdateStatus(num_rows=0, num_computed_values=0, num_excs=0, updated_cols=[], cols_with_excs=[])
+
+
+
+    Inserting rows into `chat`: 1 rows [00:00, 85.10 rows/s]
+    Inserted 1 row with 0 errors.
+
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th>
+input
+</th>
+<th>
+response
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Can you tell me who was President of the US in 1961?
+</td>
+<td>
+Yes, the President of the United States in 1961 was John F. Kennedy. He
+served as the 35th U.S. President from January 20, 1961, until his
+assassination on November 22, 1963. Kennedy was a Democrat from
+Massachusetts and is known for his role in the Cuban Missile Crisis and
+his establishment of the Peace Corps.
+</td>
+</tr>
+</tbody>
+</table>
+
+### Learn More
+
+To learn more about advanced techniques like RAG operations in
+Pixeltable, check out the [RAG Operations in
+Pixeltable](https://pixeltable.readme.io/docs/rag-operations-in-pixeltable)
+tutorial.
+
+If you have any questions, don't hesitate to reach out.

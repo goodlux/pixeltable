@@ -1,0 +1,502 @@
+---
+title: Core API
+sidebar_position: 1
+---
+
+# Core API
+
+The main Pixeltable module provides the fundamental functionality for creating and managing tables, views, data types, and operations.
+
+## Table Operations
+
+### create_table
+
+```python
+create_table(path: str, schema: Optional[dict[str, Any]] = None, *, source: Optional[TableDataSource] = None, ...)
+```
+
+Create a new base table with optional data import from various sources.
+
+---
+
+### create_view
+
+```python
+create_view(path: str, base: Union[Table, DataFrame], *, additional_columns: Optional[dict[str, Any]] = None, ...)
+```
+
+Create a view of an existing table object with optional additional columns.
+
+---
+
+### create_snapshot
+
+```python
+create_snapshot(path: str, base: Union[Table, DataFrame], *, additional_columns: Optional[dict[str, Any]] = None, ...)
+```
+
+Create a snapshot of an existing table object.
+
+---
+
+### create_replica
+
+```python
+create_replica(destination: str, source: Union[str, Table])
+```
+
+Create a replica of a table, either remote or local.
+
+---
+
+### get_table
+
+```python
+get_table(path: str)
+```
+
+Get a handle to an existing table, view, or snapshot.
+
+---
+
+### drop_table
+
+```python
+drop_table(table: Union[str, Table], force: bool = False, if_not_exists: Literal["error", "ignore"] = "error")
+```
+
+Drop a table, view, or snapshot.
+
+---
+
+### list_tables
+
+```python
+list_tables(dir_path: str = "", recursive: bool = True)
+```
+
+List the tables in a directory.
+
+---
+
+## Directory Operations
+
+### create_dir
+
+```python
+create_dir(path: str, if_exists: Literal["error", "ignore", "replace", "replace_force"] = "error", parents: bool = False)
+```
+
+Create a directory.
+
+---
+
+### drop_dir
+
+```python
+drop_dir(path: str, force: bool = False, if_not_exists: Literal["error", "ignore"] = "error")
+```
+
+Remove a directory.
+
+---
+
+### list_dirs
+
+```python
+list_dirs(path: str = "", recursive: bool = True)
+```
+
+List the directories in a directory.
+
+---
+
+### ls
+
+```python
+ls(path: str = "")
+```
+
+List the contents of a Pixeltable directory.
+
+---
+
+### move
+
+```python
+move(path: str, new_path: str)
+```
+
+Move a schema object to a new directory and/or rename it.
+
+---
+
+## System Functions
+
+### init
+
+```python
+init(config_overrides: Optional[dict[str, Any]] = None)
+```
+
+Initialize the Pixeltable environment.
+
+---
+
+### configure_logging
+
+```python
+configure_logging(*, to_stdout: Optional[bool] = None, level: Optional[int] = None, add: Optional[str] = None, remove: Optional[str] = None)
+```
+
+Configure logging settings.
+
+---
+
+### list_functions
+
+```python
+list_functions()
+```
+
+Returns information about all registered functions.
+
+---
+
+## User-Defined Functions
+
+### udf
+
+```python
+udf(*args, **kwargs)
+```
+
+Decorator to create user-defined functions.
+
+---
+
+### uda
+
+```python
+uda(*args, **kwargs)
+```
+
+Decorator to create user-defined aggregates.
+
+---
+
+### expr_udf
+
+```python
+expr_udf(*args, **kwargs)
+```
+
+Decorator to create expression user-defined functions.
+
+---
+
+### retrieval_udf
+
+```python
+retrieval_udf(*args, **kwargs)
+```
+
+Decorator to create retrieval user-defined functions.
+
+---
+
+### mcp_udfs
+
+```python
+mcp_udfs(*args, **kwargs)
+```
+
+Create UDFs from MCP server functions.
+
+---
+
+### query
+
+```python
+query(*args, **kwargs)
+```
+
+Execute a query expression.
+
+---
+
+### tools
+
+```python
+tools(*args: Union[Function, Tool])
+```
+
+Specify a collection of UDFs to be used as LLM tools.
+
+---
+
+### tool
+
+```python
+tool(fn: Function, name: Optional[str] = None, description: Optional[str] = None)
+```
+
+Specify a Pixeltable UDF to be used as an LLM tool with customizable metadata.
+
+---
+
+### array
+
+```python
+array(elements: Iterable)
+```
+
+Create an array expression from elements.
+
+---
+
+## Core Classes
+
+### Table
+
+```python
+class Table
+```
+
+Represents a Pixeltable table, view, or snapshot.
+
+---
+
+### Column
+
+```python
+class Column
+```
+
+Represents a column in a Pixeltable table.
+
+---
+
+### DataFrame
+
+```python
+class DataFrame
+```
+
+Represents a query result set with pandas-like operations.
+
+---
+
+### View
+
+```python
+class View
+```
+
+Represents a view in Pixeltable.
+
+---
+
+### InsertableTable
+
+```python
+class InsertableTable
+```
+
+Base class for tables that support insertion.
+
+---
+
+### UpdateStatus
+
+```python
+class UpdateStatus
+```
+
+Status information for table updates.
+
+---
+
+### Function
+
+```python
+class Function
+```
+
+Base class for Pixeltable functions.
+
+---
+
+### Aggregator
+
+```python
+class Aggregator
+```
+
+Base class for aggregation functions.
+
+---
+
+## Data Types
+
+### Array
+
+```python
+class Array
+```
+
+Array data type.
+
+---
+
+### Audio
+
+```python
+class Audio
+```
+
+Audio data type.
+
+---
+
+### Bool
+
+```python
+class Bool
+```
+
+Boolean data type.
+
+---
+
+### Date
+
+```python
+class Date
+```
+
+Date data type.
+
+---
+
+### Document
+
+```python
+class Document
+```
+
+Document data type.
+
+---
+
+### Float
+
+```python
+class Float
+```
+
+Float data type.
+
+---
+
+### Image
+
+```python
+class Image
+```
+
+Image data type.
+
+---
+
+### Int
+
+```python
+class Int
+```
+
+Integer data type.
+
+---
+
+### Json
+
+```python
+class Json
+```
+
+JSON data type.
+
+---
+
+### Required
+
+```python
+class Required
+```
+
+Marks a field as required (non-nullable).
+
+---
+
+### String
+
+```python
+class String
+```
+
+String data type.
+
+---
+
+### Timestamp
+
+```python
+class Timestamp
+```
+
+Timestamp data type.
+
+---
+
+### Video
+
+```python
+class Video
+```
+
+Video data type.
+
+---
+
+## Exceptions
+
+### Error
+
+```python
+class Error
+```
+
+Base exception class for Pixeltable errors.
+
+---
+
+### ExprEvalError
+
+```python
+class ExprEvalError
+```
+
+Exception raised during expression evaluation.
+
+---
+
+### PixeltableWarning
+
+```python
+class PixeltableWarning
+```
+
+Warning class for Pixeltable warnings.
+
+---

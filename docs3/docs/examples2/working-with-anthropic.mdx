@@ -1,0 +1,111 @@
+---
+title: "working with anthropic"
+description: "Jupyter notebook example for Pixeltable"
+---
+
+[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://github.com/pixeltable/pixeltable/blob/release/docs/notebooks/integrations/working-with-anthropic.ipynb)  
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pixeltable/pixeltable/blob/release/docs/notebooks/integrations/working-with-anthropic.ipynb)  
+`<a href="https://raw.githubusercontent.com/pixeltable/pixeltable/release/docs/notebooks/integrations/working-with-anthropic.ipynb" download>`\{=html\}`<img src="https://img.shields.io/badge/%E2%AC%87-Download%20Notebook-blue" alt="Download Notebook" / />`\{=html\}`</a>`\{=html\}
+
+# Working with Anthropic in Pixeltable
+
+Pixeltable's Anthropic integration enables you to access Anthropic's
+Claude LLM via the Anthropic API.
+
+### Prerequisites
+
+-   An Anthropic account with an API key
+    (https://docs.anthropic.com/en/api/getting-started)
+
+### Important Notes
+
+-   Anthropic usage may incur costs based on your Anthropic plan.
+-   Be mindful of sensitive data and consider security measures when
+    integrating with external services.
+
+First you'll need to install required libraries and enter an Anthropic
+API key.
+
+Now let's create a Pixeltable directory to hold the tables for our demo.
+
+    Connected to Pixeltable database at: postgresql+psycopg://postgres:@/pixeltable?host=/Users/asiegel/.pixeltable/pgdata
+    Created directory `anthropic_demo`.
+
+
+
+
+
+    <pixeltable.catalog.dir.Dir at 0x33944b3a0>
+
+## Messages
+
+Create a Table: In Pixeltable, create a table with columns to represent
+your input data and the columns where you want to store the results from
+Anthropic.
+
+    Created table `chat`.
+    Added 0 column values with 0 errors.
+
+
+    Added 0 column values with 0 errors.
+
+
+    Computing cells: 100%|████████████████████████████████████████████| 3/3 [00:01<00:00,  1.54 cells/s]
+    Inserting rows into `chat`: 1 rows [00:00, 149.28 rows/s]
+    Computing cells: 100%|████████████████████████████████████████████| 3/3 [00:01<00:00,  1.53 cells/s]
+    Inserted 1 row with 0 errors.
+
+<table border="1" className="dataframe">
+<thead>
+<tr style={{'text-align: right;'}}>
+<th>
+input
+</th>
+<th>
+response
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+What was the outcome of the 1904 US Presidential election?
+</td>
+<td>
+
+The outcome of the 1904 US presidential election was:
+
+-   The Republican candidate, Theodore Roosevelt, won the election.
+    Roosevelt had become president in 1901 after the assassination of
+    President William McKinley, and this was his first election as the
+    Republican nominee.
+
+-   Roosevelt defeated the Democratic candidate, Alton B. Parker, by a
+    wide margin, winning 56.4% of the popular vote and 336 electoral
+    votes compared to Parker\'s 37.6% of the popular vote and 140
+    electoral votes.
+
+-   Roosev ...... cies and his aggressive foreign policy, known as \"Big
+    Stick\" diplomacy.
+
+-   The election was also notable for the fact that it was the first
+    time a sitting president (Roosevelt) was elected in his own right
+    after originally assuming the presidency due to the death of his
+    predecessor.
+
+So in summary, Theodore Roosevelt won a decisive victory over Alton B.
+Parker, cementing his status as a powerful and popular president during
+the Progressive Era of American politics in the early 20th century.
+</td>
+</tr>
+</tbody>
+</table>
+
+### Learn More
+
+To learn more about advanced techniques like RAG operations in
+Pixeltable, check out the [RAG Operations in
+Pixeltable](https://pixeltable.readme.io/docs/rag-operations-in-pixeltable)
+tutorial.
+
+If you have any questions, don't hesitate to reach out.

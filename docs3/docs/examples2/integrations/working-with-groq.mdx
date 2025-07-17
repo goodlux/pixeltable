@@ -1,0 +1,47 @@
+
+
+
+<tr style={{'text-align: right;'}}>
+<th data-quarto-table-cell-role="th">input</th>
+<th data-quarto-table-cell-role="th">response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>How many islands are in the Aleutian island chain?</td>
+<td>The Aleutian Island chain is a part of Alaska, United States, and it stretches for approximately 1,200 miles (1,950 km) westward from the Alaska Peninsula toward Japan. The chain consists of more than 300 islands, with the largest island being Unimak Island. According to the Alaska Geographic Society, there are 314 islands in the Aleutian Island chain, although the exact number can vary depending on how the islands are defined and counted. Some sources may group certain islands together or recognize smaller islands that others do not. The Aleutian Islands are a remote and rugged chain, with many of the islands being uninhabited. The islands are volcanic in origin, and they are home to a diverse range of wildlife, including sea otters, puffins, and brown bears.</td>
+</tr>
+</tbody>
+</table>
+`];
+
+[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://github.com/pixeltable/pixeltable/blob/release/docs/notebooks/integrations/working-with-groq.ipynb)  
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pixeltable/pixeltable/blob/release/docs/notebooks/integrations/working-with-groq.ipynb)  
+<a href="https://raw.githubusercontent.com/pixeltable/pixeltable/release/docs/notebooks/integrations/working-with-groq.ipynb" download><img src="https://img.shields.io/badge/%E2%AC%87-Download%20Notebook-blue" alt="Download Notebook" / /></a>
+
+# Working with Groq in Pixeltable
+
+Pixeltable’s Groq integration enables you to access Groq models via the
+Groq API.
+
+### Prerequisites
+
+-   A Groq account with an API key
+    (https://console.groq.com/docs/quickstart)
+
+### Important Notes
+
+-   Groq usage may incur costs based on your Groq plan.
+-   Be mindful of sensitive data and consider security measures when
+    integrating with external services.
+
+First you’ll need to install required libraries and enter your OpenAI
+API key.
+
+
+```python
+%pip install -qU pixeltable groq
+```
+
+
+```python

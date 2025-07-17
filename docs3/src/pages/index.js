@@ -1,1 +1,91 @@
-import React from 'react';\nimport clsx from 'clsx';\nimport Link from '@docusaurus/Link';\nimport useDocusaurusContext from '@docusaurus/useDocusaurusContext';\nimport Layout from '@theme/Layout';\nimport styles from './index.module.css';\n\nfunction HomepageHeader() {\n  const {siteConfig} = useDocusaurusContext();\n  return (\n    <header className={clsx('hero hero--primary', styles.heroBanner)}>\n      <div className=\"container\">\n        <h1 className=\"hero__title\">{siteConfig.title}</h1>\n        <p className=\"hero__subtitle\">{siteConfig.tagline}</p>\n        <div className={styles.buttons}>\n          <Link\n            className=\"button button--secondary button--lg\"\n            to=\"/docs/get-started/overview\">\n            ✦ Get Started ✦\n          </Link>\n        </div>\n      </div>\n    </header>\n  );\n}\n\nexport default function Home() {\n  const {siteConfig} = useDocusaurusContext();\n  return (\n    <Layout\n      title={`${siteConfig.title}`}\n      description=\"The declarative data infrastructure for multimodal AI applications\">\n      <HomepageHeader />\n      <main>\n        <section className={styles.features}>\n          <div className=\"container\">\n            <div className=\"row\">\n              <div className={clsx('col col--4')}>\n                <div className=\"text--center padding-horiz--md\">\n                  <h3>❦ Declarative</h3>\n                  <p>\n                    Define what you want, not how to get it. Let Pixeltable handle the infrastructure.\n                  </p>\n                </div>\n              </div>\n              <div className={clsx('col col--4')}>\n                <div className=\"text--center padding-horiz--md\">\n                  <h3>✦ Incremental</h3>\n                  <p>\n                    Only recompute what changed. Save 90% on compute costs with smart caching.\n                  </p>\n                </div>\n              </div>\n              <div className={clsx('col col--4')}>\n                <div className=\"text--center padding-horiz--md\">\n                  <h3>✧ Multimodal Native</h3>\n                  <p>\n                    First-class support for images, videos, audio, documents, and embeddings.\n                  </p>\n                </div>\n              </div>\n            </div>\n          </div>\n        </section>\n      </main>\n    </Layout>\n  );\n}\n
+import React from 'react';
+import clsx from 'clsx';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
+import styles from './index.module.css';
+
+function HomepageHeader() {
+  const {siteConfig} = useDocusaurusContext();
+  return (
+    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      <div className="container">
+        <h1 className="hero__title">{siteConfig.title}</h1>
+        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <div className={styles.buttons}>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/get-started/overview">
+            Get Started
+          </Link>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+const FeatureList = [
+  {
+    title: 'Declarative',
+    description: (
+      <>
+        Define what you want, not how to get it. Let Pixeltable handle the infrastructure.
+      </>
+    ),
+  },
+  {
+    title: 'Incremental',
+    description: (
+      <>
+        Only recompute what changed. Save 90% on compute costs with smart caching.
+      </>
+    ),
+  },
+  {
+    title: 'Multimodal Native',
+    description: (
+      <>
+        First-class support for images, videos, audio, documents, and embeddings.
+      </>
+    ),
+  },
+];
+
+function Feature({title, description}) {
+  return (
+    <div className={clsx('col col--4')}>
+      <div className="text--center padding-horiz--md">
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+}
+
+function HomepageFeatures() {
+  return (
+    <section className={styles.features}>
+      <div className="container">
+        <div className="row">
+          {FeatureList.map((props, idx) => (
+            <Feature key={idx} {...props} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default function Home() {
+  const {siteConfig} = useDocusaurusContext();
+  return (
+    <Layout
+      title={`${siteConfig.title}`}
+      description="The declarative data infrastructure for multimodal AI applications">
+      <HomepageHeader />
+      <main>
+        <HomepageFeatures />
+      </main>
+    </Layout>
+  );
+}
