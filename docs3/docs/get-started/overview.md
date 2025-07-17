@@ -13,16 +13,16 @@ Store, version, index, and orchestrate multimodal data with simple Python APIs
 
 ## What makes Pixeltable different?
 
-### 🔧 Declarative
+### ❦ Declarative
 Define what you want, not how to get it. Let Pixeltable handle the infrastructure.
 
-### ⚡ Incremental  
+### ✦ Incremental  
 Only recompute what changed. Save 90% on compute costs with smart caching.
 
-### 🖼️ Multimodal Native
+### ✧ Multimodal Native
 First-class support for images, videos, audio, documents, and embeddings.
 
-### 🤖 AI-First
+### ❧ AI-First
 Built-in integrations with OpenAI, Anthropic, Hugging Face, and more.
 
 ## Quick Example

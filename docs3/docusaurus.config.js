@@ -23,7 +23,7 @@ const config = {
   organizationName: 'pixeltable', // Usually your GitHub org/user name.
   projectName: 'pixeltable', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -58,7 +58,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/pixeltable-social-card.jpg',
+      // image: 'img/pixeltable-social-card.jpg',
       navbar: {
         title: '',
         logo: {

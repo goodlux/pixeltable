@@ -17,7 +17,7 @@ const sidebars = {
   tutorialSidebar: [
     {
       type: 'category',
-      label: '🚀 Get Started',
+      label: '❦ Get Started',
       items: [
         'get-started/overview',
         'get-started/installation', 
@@ -26,14 +26,14 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '💡 Examples',
+      label: '✦ Examples',
       items: [
         'examples/overview'
       ],
     },
     {
       type: 'category',
-      label: '🆘 Support',
+      label: '✧ Support',
       items: [
         'support/overview'
       ],
