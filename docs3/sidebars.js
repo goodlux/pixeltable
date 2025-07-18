@@ -33,49 +33,49 @@ const sidebars = {
           type: 'category',
           label: '🚀 Basics',
           items: [
-            'examples/pixeltable-basics',
-            'examples/fundamentals/tables-and-data-operations',
-            'examples/fundamentals/queries-and-expressions'
+            'examples2/pixeltable-basics',
+            'examples2/fundamentals/tables-and-data-operations',
+            'examples2/fundamentals/queries-and-expressions'
           ]
         },
         {
           type: 'category',
           label: '💡 Use Cases',
           items: [
-            'examples/use-cases/rag-demo',
-            'examples/use-cases/audio-transcriptions',
-            'examples/object-detection-in-videos'
+            'examples2/use-cases/rag-demo',
+            'examples2/use-cases/audio-transcriptions',
+            'examples2/object-detection-in-videos'
           ]
         },
         {
           type: 'category',
           label: '🔗 Integrations',
           items: [
-            'examples/integrations/working-with-anthropic',
-            'examples/integrations/working-with-openai',
-            'examples/integrations/working-with-bedrock',
-            'examples/integrations/working-with-hugging-face',
-            'examples/integrations/working-with-ollama',
-            'examples/integrations/working-with-groq',
-            'examples/integrations/working-with-gemini',
-            'examples/integrations/working-with-mistralai',
-            'examples/integrations/working-with-deepseek',
-            'examples/integrations/working-with-fireworks',
-            'examples/integrations/working-with-together',
-            'examples/integrations/working-with-replicate',
-            'examples/integrations/working-with-llama-cpp',
-            'examples/integrations/using-label-studio-with-pixeltable'
+            'examples2/integrations/working-with-anthropic',
+            'examples2/integrations/working-with-openai',
+            'examples2/integrations/working-with-bedrock',
+            'examples2/integrations/working-with-hugging-face',
+            'examples2/integrations/working-with-ollama',
+            'examples2/integrations/working-with-groq',
+            'examples2/integrations/working-with-gemini',
+            'examples2/integrations/working-with-mistralai',
+            'examples2/integrations/working-with-deepseek',
+            'examples2/integrations/working-with-fireworks',
+            'examples2/integrations/working-with-together',
+            'examples2/integrations/working-with-replicate',
+            'examples2/integrations/working-with-llama-cpp',
+            'examples2/integrations/using-label-studio-with-pixeltable'
           ]
         },
         {
           type: 'category',
           label: '🛠️ Features',
           items: [
-            'examples/computed-columns',
-            'examples/embedding-indexes',
-            'examples/feature-guides/time-zones',
-            'examples/feature-guides/udfs-in-pixeltable',
-            'examples/feature-guides/working-with-external-files'
+            'examples2/computed-columns',
+            'examples2/embedding-indexes',
+            'examples2/feature-guides/time-zones',
+            'examples2/feature-guides/udfs-in-pixeltable',
+            'examples2/feature-guides/working-with-external-files'
           ]
         }
       ],
